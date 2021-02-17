@@ -1,6 +1,6 @@
 package by.gsu.pms;
 
-public class BusinessTrip {
+public class BusinnesTrip {
     public final double RATE = 15;
     private String account;
     private double transportExpenses;
@@ -35,16 +35,21 @@ public class BusinessTrip {
     }
 
     public void Show(){
-        System.out.printf("rate = %f\naccount = %s\ntransport = %f\ndays = %d\ntotal = %f",
-                           RATE, account, transportExpenses, days,GetTotal());
+        System.out.printf("rate = %f\naccount = %s\ntransport = %f\ndays = %d\ntotal = %f\n\n",
+                RATE, account, transportExpenses, days,GetTotal());
     }
 
     public String ToString(){
         return RATE + ";" + account + ";" + transportExpenses + ";" + days + ";" + GetTotal();
     }
 
-    public BusinessTrip(){
+    public BusinnesTrip(){
 
     }
 
+    public BusinnesTrip(String account, double transportExpenses, int days){
+        this.account = account;
+        this.transportExpenses = transportExpenses;
+        this.days = days;
+    }
 }
